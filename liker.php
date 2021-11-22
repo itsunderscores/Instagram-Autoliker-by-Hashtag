@@ -226,7 +226,6 @@ echo $yellow."\n-----------------------------\n[!] Scraping More Images ($curren
     for ($x = 1; $x <= 3; $x++) {
 	    $more_data = grab_new_ids($tag, $next_max, $current_page);
 	    $data      = json_decode($more_data, true);
-	    $current_page++;
 	    
 	    //Writing new Max ID to file
 	    $new = $data['next_max_id'];
@@ -238,6 +237,8 @@ echo $yellow."\n-----------------------------\n[!] Scraping More Images ($curren
 			array_push($array2, $new);
 			unset($array2); //Reset
 	        $array2 = array("");
+	        $current_page++;
+	        break;
 		}
 	}
     
