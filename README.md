@@ -9,4 +9,5 @@ Likes images automatically based on the hashtag you want.
 Usage: ```liker.php photography 10```
 
 photography = Tag
+
 10 = Delay (Optional, otherwise it is randomized delay)
